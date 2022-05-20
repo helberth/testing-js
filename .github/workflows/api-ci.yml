@@ -58,7 +58,7 @@ jobs:
           MONGO_INITDB_ROOT_USERNAME: test
           MONGO_INITDB_ROOT_PASSWORD: test123
         ports:
-          - 27017:27017
+          - 27018:27017
 
     steps:
       - name: Checkout
