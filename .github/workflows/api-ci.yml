@@ -28,3 +28,21 @@ jobs:
       - name: run unit test
         shell: bash
         run: yarn test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: "yarn"
+          cache-dependency-path: ./api/yarn.lock
+      - name: install dependencies
+        shell: bash
+        run: yarn
+      - name: run unit test
+        shell: bash
+        run: yarn lint
