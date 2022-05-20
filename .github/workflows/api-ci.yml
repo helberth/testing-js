@@ -24,7 +24,7 @@ jobs:
           cache-dependency-path: ./api/yarn.lock
       - name: install dependencies
         shell: bash
-        run: yarn ci
+        run: yarn
       - name: run unit test
         shell: bash
         run: yarn test
